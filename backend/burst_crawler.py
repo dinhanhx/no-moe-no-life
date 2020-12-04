@@ -6,11 +6,11 @@ from const import HEADERS, KEY_WORDS
 
 
 def crawl(key_word):
-    page = 0
+    p = 0
     out_dict_list = []
     while True:
         page += 1
-        url = f'https://burst.shopify.com/photos/search?page={page}&q={key_word}'
+        url = f'https://burst.shopify.com/photos/search?page={p}&q={key_word}'
         http = urllib3.PoolManager()
         response = http.request('GET', url, headers=HEADERS)
         if response.status == 404:

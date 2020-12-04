@@ -13,7 +13,11 @@ Firstly, run `cd backend` at root.
 
 #### Setup
 
-Then, `pip install -r requirements.txt`
+Then, `pip install -r requirements.txt`.
+```bash
+py unsplash_crawler.py
+py burst_crawler.py
+```
 
 #### Run
 

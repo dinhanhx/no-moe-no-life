@@ -6,18 +6,24 @@ from const import HEADERS, KEY_WORDS
 
 
 def crawl(key_word):
-    url = f'https://burst.shopify.com/photos/search?page=1&q={key_word}'
-    http = urllib3.PoolManager()
-    response = http.request('GET', url, headers=HEADERS)
-    soup = bs4.BeautifulSoup(response.data, 'html.parser')
-
+    page = 0
     out_dict_list = []
-    for img_title in soup.find_all('div', {'class': 'photo-tile'}):
-        img_tag = img_title.find('img')
-        out_dict_list.append({'image': img_tag['src'].split('?')[0],
-                              'host': 'Burst',
-                              'original': url,
-                              'title': key_word})
+    while True:
+        page += 1
+        url = f'https://burst.shopify.com/photos/search?page={page}&q={key_word}'
+        http = urllib3.PoolManager()
+        response = http.request('GET', url, headers=HEADERS)
+        if response.status == 404:
+            break
+        else:
+            soup = bs4.BeautifulSoup(response.data, 'html.parser')
+
+            for img_title in soup.find_all('div', {'class': 'photo-tile'}):
+                img_tag = img_title.find('img')
+                out_dict_list.append({'image': img_tag['src'].split('?')[0],
+                                      'host': 'Burst',
+                                      'original': url,
+                                      'title': key_word})
 
     return out_dict_list
 

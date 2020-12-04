@@ -1,26 +1,12 @@
-# Crawler for skin cancer images
+# No moe no life
 
-This project attempts to create a crawler for dermoscopic images of skin cancer.
-This includes both frontend and backend.
+This project is based on [Huy-Ngo/skin-crawler](https://github.com/Huy-Ngo/skin-crawler)'s frontend and mostly backend.
 
-The backend consists of packages to crawl images from websites and a web server
-to collect them and serve the images as an API.
-
-The frontend consumes the API and displays information to the user.
+`No moe no life` focuses on the cute, wholesome things of the internet.
 
 ## How to run
 
 ### Backend
-
-- Add Kaggle API token at `~/.kaggle/kaggle.json`
-- In `backend/`, run `static_crawler.py`. The crawling process takes some time.
-- Run Flask server:
-
-```bash
-export FLASK_APP=app.py
-export FLASK_ENV=development
-flask run
-```
 
 ### Frontend
 

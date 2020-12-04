@@ -2,11 +2,11 @@ const imageContainer = document.querySelector("section.container#inf-img");
 const modal = document.querySelector("div#modal");
 
 /*
-	* Paginated 
+	* Paginated
 	* */
 var page = 1;
 
-function moreCancer(){
+function moreMoe(){
 	var req = 'http://127.0.0.1:5000/all/' + page.toString();
 		fetch(req, {mode: "cors"})
 			.then(response => response.json())
@@ -46,7 +46,7 @@ function displayModal(image) {
 
 /*
 	* Create an image element in the HTML with the information provided
-	* */	
+	* */
 function displayImage(image) {
 	const div = document.createElement("div");
 	const span = document.createElement("span");

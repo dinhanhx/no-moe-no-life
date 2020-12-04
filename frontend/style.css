@@ -1,5 +1,5 @@
 body{
-	background-color: #0e153a;
+	background-color: #9c27b0;
 }
 
 .header{
@@ -16,7 +16,7 @@ body{
 	border-radius: 50%;
 	left: 474px;
 	top: 40px;
-	background: #3D5AF1;
+	background: #512da8;
 	z-index: -1;
 }
 
@@ -26,7 +26,7 @@ body{
 	height: 102px;
 	left: -10px;
 	top: 40px;
-	background: #3D5AF1;
+	background: #512da8;
 	z-index: -1;
 }
 
@@ -40,12 +40,12 @@ body{
 	font-family: 'Roboto Mono', monospace;
 	font-style: normal;
 	font-weight: normal;
-	font-size: 60px;
+	font-size: 50px;
 	line-height: 79px;
 	text-decoration: none;
 	color: #FFFFFF;
 	z-index: 0;
-	/*background-color: #3D5AF1;*/
+	/*background-color: #512da8;*/
 }
 
 .container {
@@ -71,7 +71,7 @@ img{
 
 .title{
 	display: none;
-	position: absolute; 
+	position: absolute;
 }
 
 .container > div:hover{
@@ -105,9 +105,9 @@ img{
 .footer > button{
 	margin-top: 30px;
 	width: 200px;
- 	background-color: #44c767;
+ 	background-color: #f48fb1;
 	border-radius: 28px;
-	border: 1px solid #18ab29;
+	border: 1px solid #660626;
 	display: inline-block;
 	cursor: pointer;
 	color: #ffffff;
@@ -120,7 +120,7 @@ img{
 }
 
 button:hover {
-	background-color: #5cbf2a;
+	background-color: #d13268;
 }
 
 div#modal {

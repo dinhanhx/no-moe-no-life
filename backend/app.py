@@ -4,8 +4,12 @@ from random import shuffle
 from flask import Flask
 from flask_cors import CORS
 
-with open('data.json', 'r') as f:
+with open('burst.json', 'r') as f:
     data = load(f)
+    shuffle(data)
+
+with open('unsplash.json', 'r') as f:
+    data += load(f)
     shuffle(data)
 
 app = Flask(__name__)

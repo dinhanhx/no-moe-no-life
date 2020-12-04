@@ -2,10 +2,8 @@ import urllib3
 import bs4
 
 from json import dump
-from const import HEADERS
+from const import HEADERS, KEY_WORDS
 
-KEY_WORDS = ['dog', 'cat', 'bunny', 'fox', 'tacos', 'kitten', 'wolf']
-KEY_WORDS.sort()
 
 def crawl(key_word):
     url = f'https://unsplash.com/s/photos/{key_word}?orientation=squarish'
@@ -29,5 +27,5 @@ if __name__ == '__main__':
     for kw in KEY_WORDS:
         data += crawl(kw)
 
-    with open('data.json', 'w') as f:
+    with open('unsplash.json', 'w') as f:
         dump(data, f)

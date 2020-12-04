@@ -9,7 +9,7 @@ def crawl(key_word):
     p = 0
     out_dict_list = []
     while True:
-        page += 1
+        p += 1
         url = f'https://burst.shopify.com/photos/search?page={p}&q={key_word}'
         http = urllib3.PoolManager()
         response = http.request('GET', url, headers=HEADERS)
